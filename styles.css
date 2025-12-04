@@ -33,7 +33,7 @@
 
 body {
     background-color: var(--fondo-body);
-    font-family: var(--fuente-cuerpo);
+     font-family: 'Pontano Sans', sans-serif;
     color: var(--texto-gris);
     overflow-x: hidden;
 }
