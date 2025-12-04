@@ -128,7 +128,7 @@ body {
 }
 
 .texto-emotivo {
-  font-family: "Pontano Sans", sans-serif; /* Cambiado a Didact para legibilidad */
+--fuente-titulo: "Pontano Sans", sans-serif; /* Cambiado a Didact para legibilidad */
     line-height: 1.9;
     color: #444;
     margin: 30px 0;
@@ -144,7 +144,7 @@ body {
 }
 
 .titulo-padres {
-    font-family: var(--fuente-titulo);
+--fuente-titulo: "Pontano Sans", sans-serif;
     color: var(--dorado);
     font-size: 3rem; /* Pinyon Script adjustment */
     margin-bottom: 15px;
