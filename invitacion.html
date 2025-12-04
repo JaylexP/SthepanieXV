@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años - Invitación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<audio id="musicaFondo" loop autoplay>
+    <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio> 
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="titulo-principal">Sthepanie Ardon</h1>
+            <p class="subtitulo">TE INVITO A CELEBRAR ESTE MOMENTO MAGICO </p>
+        </div>
+        <div class="wave-container">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave-svg">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fffafb;"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section class="foto-destacada-seccion">
+        <h2 class="titulo-dorado" style="font-size: 1.4rem;">Mis 15 Años</h2>
+        <p class="texto-centro">NO TE PIERDAS ESTA AVENTURA</p>
+        <div class="marco-foto-grande">
+            <img src="_A745325.jpg" alt="Foto Destacada Quinceañera">
+        </div>
+    </section>
+
+    <section class="mensaje-final">
+        <h2 class="titulo-dorado">Con Amor</h2>
+        <div class="tarjeta-mensaje">
+            <p class="instruccion-musica">Tocar el corazón para escuchar la hermosa canción.</p>
+            <div class="iconos-musica">
+                ♫ <i class="fas fa-heart heart-beat" style="color:#d48895;"></i> ♫
+            </div>
+            
+            <p class="texto-emotivo">
+                Con la bendición de Dios y el amor que mi familia me ha dado, me siento feliz
+                de llegar a este momento de mi vida; el día que dejaré atrás mi infancia y
+                comenzaré un nuevo viaje.
+                <br><br>
+                Porque son parte de mi vida es mi deseo que compartan conmigo la alegría de
+                mis quince años, viviendo cada momento con el amor y la alegría que merece
+                esta celebración tan especial.
+            </p>
+
+            <div class="division-linea"></div>
+
+            <h3 class="titulo-padres">Mis Padres</h3>
+            <div class="nombres-padres">
+                <p>Karen Pineda</p>
+                <p>Gerald Ardon</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria-seccion">
+        <h2 class="titulo-dorado">Un recorrido de estos XV años</h2>
+        <p class="texto-centro">Junto a personas que son muy importantes en mi vida</p>
+        
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slide"><img src="H7.JPEG" alt="Foto 1"></div>
+                <div class="slide"><img src="MA.JPEG" alt="Foto 2"></div>
+                <div class="slide"><img src="PH.JPEG" alt="Foto 3"></div>
+                <div class="slide"><img src="Her1.jpg" alt="Foto 4"></div>
+                <div class="slide"><img src="Her2.jpg" alt="Foto 5"></div>
+                <div class="slide"><img src="her3.jpg" alt="Foto 6"></div>
+                <div class="slide"><img src="her4.jpg" alt="Foto 7"></div>
+                <div class="slide"><img src="JS.JPEG" alt="Foto 8"></div>
+                <div class="slide"><img src="PH1.JPEG" alt="Foto 9"></div>
+                <div class="slide"><img src="MA.JPEG" alt="Foto 10"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cuenta-regresiva">
+        <div class="reloj-container">
+            <h2 class="titulo-falta">Falta</h2>
+            <div id="reloj" class="reloj">
+                <div class="tiempo-box">
+                    <span id="dias">00</span>
+                    <p>DÍAS</p>
+                </div>
+                <div class="separador">|</div>
+                <div class="tiempo-box">
+                    <span id="horas">00</span>
+                    <p>HS</p>
+                </div>
+                <div class="separador">|</div>
+                <div class="tiempo-box">
+                    <span id="minutos">00</span>
+                    <p>MIN</p>
+                </div>
+                <div class="separador">|</div>
+                <div class="tiempo-box">
+                    <span id="segundos">00</span>
+                    <p>SEG</p>
+                </div>
+            </div>
+            <div class="corazon">❤</div>
+        </div>
+    </section>
+
+  <section class="etiqueta-fiesta-seccion">
+    <h2 class="titulo-dorado" style="font-size: 3.5rem;">Fiesta</h2>
+    <p class="texto-centro">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+    
+    <div class="tarjetas-fiesta-container">
+        <div class="tarjeta-fiesta">
+            <h3 class="titulo-tarjeta">Fotos</h3>
+            <div class="icono-tarjeta">
+                <i class="fas fa-camera"></i>
+            </div>
+            <p class="texto-tarjeta">Ayúdanos a capturar los mejores momentos y envíalos a nuestro WhatsApp.</p>
+            <button onclick="abrirModal('modalFotos')" class="boton-fiesta">Compartir Fotos</button>
+        </div>
+
+        <div class="tarjeta-fiesta">
+            <h3 class="titulo-tarjeta">Dress Code</h3>
+            <div class="icono-tarjeta">
+                <i class="fas fa-tshirt"></i> 
+            </div>
+            <p class="texto-tarjeta">Una orientación para tu vestuario</p>
+            <button onclick="abrirModal('modalDressCode')" class="boton-fiesta">Ver más</button>
+        </div>
+
+        <div class="tarjeta-fiesta">
+            <h3 class="titulo-tarjeta">Tips y Notas</h3>
+            <div class="icono-tarjeta">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <p class="texto-tarjeta">Información adicional para tener en cuenta</p>
+            <button onclick="abrirModal('modalTips')" class="boton-fiesta">+ Info</button>
+        </div>
+
+        <div class="tarjeta-fiesta">
+            <h3 class="titulo-tarjeta">Confirmación</h3>
+            <div class="icono-tarjeta">
+                <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <p class="texto-tarjeta">Por favor confirma tu asistencia.</p>
+            <button onclick="abrirModal('modalConfirmacion')" class="boton-fiesta">Confirmar</button>
+        </div>
+    </div>
+</section>
+
+<section class="contenedor-modales">
+
+ <div id="modalFotos" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('modalFotos')">&times;</span>
+        
+        <h3 class="titulo-modal">Compartir Fotos</h3>
+        
+        <div class="icono-modal" style="font-size: 3rem; color: #d48895; margin-bottom: 15px;">
+            <i class="fas fa-images"></i>
+        </div>
+        
+        <p>¡Queremos ver la fiesta desde tus ojos!</p>
+        <p style="margin-bottom: 20px;">Haz clic en el botón de abajo para abrir WhatsApp y enviarnos todas las fotos y videos que tomes.</p>
+        
+        <a href="https://wa.me/50586224571?text=Hola!%20Aqu%C3%AD%20te%20env%C3%ADo%20las%20fotos%20y%20videos%20que%20tom%C3%A9%20en%20el%20evento." 
+           target="_blank" 
+           class="boton-rosa" 
+           style="text-decoration: none; display: inline-block; padding: 10px 20px; color: white;"
+           onclick="cerrarModal('modalFotos')">
+            <i class="fab fa-whatsapp"></i> Enviar fotos ahora
+        </a>
+    </div>
+</div>
+
+    <div id="modalDressCode" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modalDressCode')">&times;</span>
+            <h3 class="titulo-modal">Dress Code</h3>
+            <div class="icono-modal"><i class="fas fa-user-tie"></i> <i class="fas fa-female"></i></div>
+            <p><strong>Formal / Elegante</strong></p>
+            <p>Ellas: Vestimenta formal.<br>Ellos:  formal</p>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">(Por favor, evitar color Rosado, blanco, rojo)</p>
+        </div>
+    </div>
+
+    <div id="modalTips" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modalTips')">&times;</span>
+            <h3 class="titulo-modal">Tips y Notas</h3>
+            <ul style="text-align: left; margin-top: 10px; color: #555;">
+                <li>📸 Comparte tus fotos con el hashtag <strong>#MisXV</strong></li>
+                <li>⏰ Se ruega puntualidad.</li>
+                <li>🎁 Lluvia de sobres (opcional).</li>
+                <li>🚗 Hay estacionamiento disponible en el lugar.</li>
+            </ul>
+        </div>
+    </div>
+<div id="modalConfirmacion" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('modalConfirmacion')">&times;</span>
+        
+        <h3 class="titulo-modal">Confirmar Asistencia</h3>
+        <p>¡Me encantaría que nos acompañes!</p>
+        <p style="color: #666; margin-bottom: 20px;">Haz clic en el botón para enviarme un mensaje de confirmación.</p>
+
+        <a href="https://wa.me/50586224571?text=Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20tus%20XV.%20Soy:" 
+           target="_blank" 
+           class="boton-rosa" 
+           style="text-decoration: none; display: inline-block; padding: 10px 20px; color: white;"
+           onclick="cerrarModal('modalConfirmacion')">
+            Confirmar por WhatsApp
+        </a>
+    </div>
+</div>
+
+</section>
+
+<section class="galeria-extra-seccion">
+    <h2 class="titulo-dorado">Momentos Especiales</h2>
+    
+    <div class="grid-4-fotos">
+        <div class="foto-item">
+            <img src="_A745185.jpg" alt="Foto 1">
+        </div>
+        <div class="foto-item">
+            <img src="_A745209.jpg" alt="Foto 2">
+        </div>
+        <div class="foto-item">
+            <img src="_A745325.jpg" alt="Foto 3">
+        </div>
+        <div class="foto-item">
+            <img src="_A745233.jpg" alt="Foto 4">
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <section class="detalles-fiesta">
+        <div class="wave-top">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+
+        <div class="icono-fiesta">
+            <i class="fas fa-glass-cheers"></i>
+        </div>
+
+        <div class="cinta-titulo">
+            <h3>Fiesta</h3>
+        </div>
+
+        <div class="info-bloque">
+            <h4>DÍA</h4>
+            <p>Viernes  10 de Enero 2026</p>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+Años&dates=20260110T200000Z/20260111T020000Z&details=Te+espero+para+celebrar+mis+15+años!&location=Ubicación+de+la+fiesta" target="_blank" class="boton-rosa">Agendar</a>
+        </div>
+
+        <div class="info-bloque">
+            <h4>LUGAR</h4>
+            <p>Salón de Eventos "CASA JARDIN"</p>
+            <a href="https://wa.me/50586224571?text=Hola!%20Quiero%20confirmar%20mi%20asistencia%20a%20tus%20XV.%20Soy:s" target="_blank" class="boton-mauve">Confirmar asistencia</a>
+        </div>
+
+        <div class="info-bloque">
+            <h4>DIRECCIÓN</h4>
+            <p>Casa Jardin Eventos
+2 cuadras, De la Iglesia Las Colinas, 1 cuadra al lago, 1 2 al Este, Managua, 10000 (CODIGO MAESTRO), NI</p>
+            <a href="https://www.google.com/maps/place/Casa+Jardin+Eventos/@12.0937897,-86.2264725,1113m/data=!3m1!1e3!4m6!3m5!1s0x8f73fe4d55729123:0x9bfa97f966c907f!8m2!3d12.0938365!4d-86.2264669!16s%2Fg%2F11gbwz2y1h?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" class="boton-rosa">¿Cómo llegar?</a>
+        </div>
+
+
+    </section>
+
+ 
+
+   
+
+    <script>
+        // --- SCRIPT CUENTA REGRESIVA ---
+        const fechaXV = new Date("Jan 10, 2026 00:00:00").getTime();
+
+        const x = setInterval(function() {
+            const ahora = new Date().getTime();
+            const distancia = fechaXV - ahora;
+
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            document.getElementById("dias").innerHTML = dias;
+            document.getElementById("horas").innerHTML = horas;
+            document.getElementById("minutos").innerHTML = minutos;
+            document.getElementById("segundos").innerHTML = segundos;
+
+            if (distancia < 0) {
+                clearInterval(x);
+                document.getElementById("reloj").innerHTML = "¡Llegó el gran día!";
+            }
+        }, 1000);
+
+        // --- SCRIPT PARA LOS MODALES (Ventanas emergentes) ---
+        function abrirModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function cerrarModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

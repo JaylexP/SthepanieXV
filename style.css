@@ -1,0 +1,131 @@
+/* style.css */
+
+/* Importamos fuentes bonitas de Google Fonts (Quicksand y Great Vibes o similar) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --color-primary: #e85d9e; /* Rosa fuerte del nombre */
+    --color-secondary: #f4d06f; /* Dorado de "Mis XV años" */
+    --color-text: #d65a92; /* Texto general */
+    --bg-gradient-start: #ffe6f2; /* Rosa muy claro */
+    --bg-gradient-end: #ffd1e3; /* Rosa un poco más oscuro */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text);
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Tipografía */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #cc6b96;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+/* Imagen de la Quinceañera */
+.photo-frame {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(232, 93, 158, 0.3);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background-color: var(--color-primary);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(232, 93, 158, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(232, 93, 158, 0.6);
+}
+
+.footer-quote {
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #c06c8f;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
