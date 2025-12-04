@@ -574,3 +574,140 @@ footer {
         height: 180px; /* Un poco más pequeñas en celular */
     }
 }
+
+.mesa-regalos-elegante {
+    --color-dorado-antiguo: #8d6e63; /* Tono marrón/dorado de la imagen */
+    --color-texto-cita: #6d4c41;
+    --fondo-crema: #fffdf9;
+    --fuente-titulo: 'Cinzel', serif; /* Fuente romana elegante */
+    --fuente-texto: 'Playfair Display', serif;
+    
+    position: relative;
+    padding: 100px 20px 80px;
+    background-color: var(--fondo-crema);
+    text-align: center;
+    overflow: hidden; /* Para recortar las flores si son muy grandes */
+}
+
+/* --- FLORES EN LAS ESQUINAS --- */
+.decoracion-floral {
+    position: absolute;
+    top: 0;
+    width: 250px; /* Ajusta el tamaño según tu imagen */
+    max-width: 40%;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.flor-izq {
+    left: -20px;
+    top: -20px;
+}
+
+.flor-der {
+    right: -20px;
+    top: -20px;
+    transform: scaleX(-1); /* Voltea la imagen para hacer espejo si usas la misma */
+}
+
+.decoracion-floral img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- TÍTULO --- */
+.contenido-central {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.titulo-mesa {
+    font-family: var(--fuente-titulo);
+    color: var(--color-dorado-antiguo);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 400; /* Cinzel es naturalmente gruesa */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.separador-fino {
+    width: 100px;
+    height: 1px;
+    background-color: var(--color-dorado-antiguo);
+    margin: 0 auto 40px;
+}
+
+/* --- ECUACIÓN DE ÍCONOS --- */
+.ecuacion-regalos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.icono-dorado {
+    width: 50px;
+    height: 40px;
+    color: var(--color-dorado-antiguo); /* Esto controla el color del SVG */
+    display: block;
+}
+
+.signo {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    color: var(--color-dorado-antiguo);
+    margin: 0 5px;
+}
+
+.resultado {
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+    color: var(--color-dorado-antiguo);
+    margin-left: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- CAJA DE TEXTO/CITA --- */
+.caja-frase {
+    border: 1px solid var(--color-dorado-antiguo); /* Borde externo */
+    padding: 5px; /* Espacio para crear el efecto doble línea */
+    margin-top: 20px;
+}
+
+.marco-interno {
+    border: 1px solid var(--color-dorado-antiguo); /* Borde interno */
+    padding: 25px 30px;
+    background-color: transparent;
+}
+
+.caja-frase p {
+    font-family: var(--fuente-texto);
+    color: #4a3b36; /* Un gris café oscuro para lectura */
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .titulo-mesa { font-size: 2rem; }
+    
+    .ecuacion-regalos { gap: 5px; }
+    .icono-dorado { width: 35px; height: 30px; }
+    .signo { font-size: 1.5rem; }
+    .resultado { font-size: 1rem; width: 100%; margin-top: 10px; }
+    
+    .decoracion-floral { width: 140px; }
+    
+    .marco-interno { padding: 20px 15px; }
+    .caja-frase p { font-size: 0.95rem; }
+}
