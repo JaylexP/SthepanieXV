@@ -1,26 +1,21 @@
-/* =========================================
-   1. IMPORTACIÓN DE FUENTES
-   ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-
-/* =========================================
-   2. VARIABLES Y CONFIGURACIÓN GLOBAL
-   ========================================= */
+/* --- VARIABLES Y RESET --- */
 :root {
-    /* Paleta de Colores: Más Rosados y Vivos */
-    --rosa-muy-claro: #fff0f5;   /* LavenderBlush */
-    --rosa-pastel: #ffc2cd;      /* Rosa suave */
-    --rosa-medio: #ff9eb5;       /* Rosa chicle suave */
-    --rosa-fuerte: #ff5c8d;      /* Rosa vibrante */
-    --rosa-oscuro: #d81b60;      /* Magenta oscuro para contrastes */
-    --dorado: #e6c200;           /* Dorado más brillante */
-    --dorado-suave: #f9e79f;
-    
-    --texto-gris: #6d5e63;       /* Gris con subtono rosado */
+    --rosa-pastel: #ffe4e9;
+    --rosa-medio: #ffc1cc;
+    --rosa-fuerte: #d48895;
+    --rosa-boton-hover: #c07683;
+    --dorado: #d4af37;
+    --texto-gris: #5a5a5a;
     --blanco: #ffffff;
-    
-    /* Tipografía Unificada */
-    --fuente-principal: 'Didact Gothic', sans-serif;
+    --fondo-body: #fffafb;
+    --fuente-titulo: 'Great Vibes', cursive;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+    --fuente-elegante: 'Playfair Display', serif;
+   color-dorado-bronce: #A88860; /* El color exacto de los íconos y el título */
+    --color-texto-gris: #4F4F4F;    /* Color gris oscuro para el texto del cuerpo */
+    --fuente-titulo-cursiva: 'Parisienne', cursive;
+    --fuente-cuerpo-serif: 'Playfair Display', serif;
+    --fondo-rosado-suave: #fff9f9; /* Fondo base muy claro */
 }
 
 * {
@@ -30,128 +25,50 @@
 }
 
 body {
-    background-color: var(--rosa-muy-claro);
-    font-family: var(--fuente-principal);
+    background-color: var(--fondo-body);
+    font-family: var(--fuente-cuerpo);
     color: var(--texto-gris);
     overflow-x: hidden;
-    /* Efecto de fondo con "brillitos" estáticos sutiles */
-    background-image: 
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(var(--rosa-pastel) 1px, transparent 1px);
-    background-size: 40px 40px;
-    background-position: 0 0, 20px 20px;
 }
 
-/* =========================================
-   3. ESTILOS DE TEXTO (Didact Gothic)
-   ========================================= */
-h1, h2, h3, h4, h5, h6, p, span, a, button {
-    font-family: var(--fuente-principal);
-}
-
+/* --- ESTILOS GENERALES DE TEXTO --- */
 .titulo-dorado {
+    font-family: var(--fuente-titulo);
     color: var(--dorado);
-    font-size: 2.8rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
-    position: relative;
-    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
 .texto-centro {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     margin-bottom: 25px;
-    color: var(--texto-gris);
-    line-height: 1.6;
+    color: #777;
 }
 
-/* =========================================
-   4. EFECTOS ESPECIALES (Brillos y Flores)
-   ========================================= */
-
-/* Animación de destello */
-@keyframes destello {
-    0% { opacity: 0.3; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
-    100% { opacity: 0.3; transform: scale(0.8); }
-}
-
-/* Clase para añadir partículas brillantes sobre elementos */
-.con-brillos {
-    position: relative;
-}
-
-.con-brillos::after {
-    content: "✨";
-    position: absolute;
-    top: -15px;
-    right: -10px;
-    font-size: 1.5rem;
-    animation: destello 2s infinite ease-in-out;
-    color: var(--dorado);
-}
-
-.con-brillos::before {
-    content: "✨";
-    position: absolute;
-    bottom: -10px;
-    left: -10px;
-    font-size: 1rem;
-    animation: destello 3s infinite ease-in-out reverse;
-    color: var(--rosa-fuerte);
-}
-
-/* Decoración Floral sutil en esquinas de contenedores */
-.decoracion-floral-esquina::after {
-    content: "🌸";
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 3rem;
-    opacity: 0.2;
-    transform: rotate(-20deg);
-    z-index: 0;
-}
-
-/* =========================================
-   5. SECCIÓN HERO (PRINCIPAL)
-   ========================================= */
+/* --- HERO SECTION --- */
 .hero {
-    /* Degradado rosa más intenso */
-    background: linear-gradient(180deg, var(--rosa-pastel) 0%, var(--rosa-muy-claro) 100%);
+    background: linear-gradient(135deg, #ffd1dc 0%, #fff 100%);
     text-align: center;
-    padding-top: 80px;
+    padding-top: 60px;
     position: relative;
-    padding-bottom: 120px;
+    padding-bottom: 100px; /* Espacio para la onda */
 }
 
 .titulo-principal {
-    font-size: 4rem; /* Didact Gothic es más fina, aumentamos tamaño */
+    font-family: var(--fuente-titulo);
+    font-size: 4.5rem;
     color: var(--rosa-fuerte);
-    margin-bottom: 15px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    text-shadow: 3px 3px 0px white;
+    margin-bottom: 10px;
 }
 
 .subtitulo {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--rosa-oscuro);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: rgba(255,255,255,0.6);
-    display: inline-block;
-    padding: 5px 20px;
-    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 300;
 }
 
-/* Ondas SVG */
 .wave-container {
     position: absolute;
     bottom: 0;
@@ -166,144 +83,98 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
     display: block;
     width: calc(100% + 1.3px);
     height: 120px;
-    fill: var(--blanco); /* Asegura que la onda se funda con la siguiente sección */
 }
 
-/* =========================================
-   6. SECCIÓN MENSAJE Y PADRES
-   ========================================= */
+/* --- SECCIÓN MENSAJE (Ahora es la segunda) --- */
 .mensaje-final {
     padding: 40px 20px 60px;
-    background-color: var(--blanco);
+    background-color: var(--fondo-body);
     text-align: center;
-    position: relative;
 }
 
 .tarjeta-mensaje {
-    background: linear-gradient(135deg, #fff 0%, #fffbfd 100%);
-    max-width: 750px;
+    background: white;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 50px;
-    border-radius: 30px;
-    /* Doble borde estilo marco elegante */
-    border: 4px double var(--rosa-pastel);
-    box-shadow: 
-        0 15px 35px rgba(255, 92, 141, 0.15),
-        inset 0 0 20px rgba(255, 193, 204, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Adorno floral superior */
-.tarjeta-mensaje::before {
-    content: "🌺 🌿 🌺";
-    display: block;
-    font-size: 1.5rem;
-    color: var(--rosa-medio);
-    margin-bottom: 20px;
-    letter-spacing: 10px;
-    opacity: 0.7;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 2px solid var(--rosa-pastel);
 }
 
 .instruccion-musica {
-    font-size: 0.9rem;
-    color: var(--rosa-oscuro);
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 5px;
 }
 
 .heart-beat {
-    color: var(--rosa-fuerte);
-    animation: latido 1.2s infinite;
+    animation: latido 1.5s infinite;
 }
 @keyframes latido {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+    50% { transform: scale(1.1); }
 }
 
 .texto-emotivo {
-    line-height: 2;
-    color: #555;
+    font-family: var(--fuente-elegante);
+    line-height: 1.9;
+    color: #444;
     margin: 30px 0;
-    font-size: 1.15rem;
-    /* Quitamos cursiva forzada, usamos Didact Gothic limpio */
-    font-style: normal; 
+    font-size: 1.05rem;
+    font-style: italic;
 }
 
 .division-linea {
-    height: 3px;
-    background: linear-gradient(to right, transparent, var(--rosa-fuerte), transparent);
-    width: 60%;
-    margin: 30px auto;
-    border-radius: 2px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--rosa-medio), transparent);
+    width: 80%;
+    margin: 25px auto;
 }
 
 .titulo-padres {
-    color: var(--rosa-fuerte);
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-family: var(--fuente-titulo);
+    color: var(--dorado);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
 }
 
 .nombres-padres p {
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: var(--texto-gris);
-    margin: 10px 0;
-    border-bottom: 1px solid var(--rosa-muy-claro);
-    display: inline-block;
-    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #333;
+    margin: 8px 0;
 }
 
-/* =========================================
-   7. FOTO DESTACADA
-   ========================================= */
+/* --- NUEVA SECCIÓN FOTO DESTACADA --- */
 .foto-destacada-seccion {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
-    background-color: var(--rosa-muy-claro);
+    background-color: var(--blanco);
 }
 
 .marco-foto-grande {
     max-width: 600px;
     margin: 0 auto;
-    border-radius: 50% 50% 20px 20px; /* Forma de arco */
-    padding: 20px;
+    border-radius: 20px;
+    padding: 15px;
     background-color: var(--blanco);
-    box-shadow: 0 10px 25px rgba(212, 136, 149, 0.2);
-    border: 4px dashed var(--rosa-medio); /* Borde punteado estilo costura */
-    position: relative;
-}
-
-.marco-foto-grande::after {
-    content: "✨";
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    animation: destello 2.5s infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 3px solid var(--rosa-pastel);
 }
 
 .marco-foto-grande img {
     width: 100%;
     height: auto;
-    border-radius: 50% 50% 15px 15px;
+    border-radius: 15px;
     display: block;
-    border: 2px solid var(--rosa-pastel);
 }
 
-/* =========================================
-   8. GALERÍA CARRUSEL INFINITO
-   ========================================= */
+/* --- GALERÍA DESLIZANTE (CARRUSEL INFINITO) --- */
 .galeria-seccion {
-    padding: 50px 0;
-    background: white;
-    border-top: 5px solid var(--rosa-pastel);
-    border-bottom: 5px solid var(--rosa-pastel);
+    padding: 50px 0; /* Quitamos padding lateral para que el slider ocupe todo */
+    background-color: var(--fondo-body);
+    overflow: hidden; /* Esencial para ocultar lo que sale de la pantalla */
 }
 
 .slider-container {
@@ -312,133 +183,125 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
     padding: 20px 0;
 }
 
+/* La pista que se mueve */
 .slider-track {
     display: flex;
-    width: calc(300px * 12); /* Ajustado para asegurar espacio */
-    animation: scroll 25s linear infinite;
+    width: calc(300px * 6); /* Ancho aproximado: ancho de slide * número total de slides (originales + duplicados) */
+    animation: scroll 20s linear infinite; /* Ajusta '20s' para más rápido o más lento */
 }
 
 .slide {
-    width: 300px;
-    padding: 0 15px;
+    width: 300px; /* Ancho fijo para cada imagen */
+    padding: 0 15px; /* Espacio entre imágenes */
     flex-shrink: 0;
 }
 
 .slide img {
     width: 100%;
-    height: 220px;
+    height: 200px; /* Altura fija para uniformidad */
     object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border: 4px solid white;
-    outline: 2px solid var(--rosa-medio); /* Doble borde truco */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px solid var(--rosa-pastel);
     transition: transform 0.3s;
 }
 
 .slide img:hover {
-    transform: scale(1.08) rotate(2deg);
-    outline-color: var(--rosa-fuerte);
+    transform: scale(1.05);
 }
 
+/* Animación del desplazamiento */
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Se mueve hacia la izquierda exactamente la mitad de su ancho total */
+        /* Si tienes 3 fotos originales de 300px + 30px margen, el total es aprox 990px. */
+        /* Ajusta este porcentaje si el salto no es suave. -50% funciona si duplicaste exactamente el contenido. */
+        transform: translateX(-50%); 
+    }
 }
 
-/* =========================================
-   9. CUENTA REGRESIVA CON FLORES
-   ========================================= */
+/* --- CUENTA REGRESIVA --- */
 .cuenta-regresiva {
     position: relative;
-    padding: 80px 20px;
+    padding: 70px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at center, var(--rosa-muy-claro) 0%, white 70%);
-    margin-top: 0;
+    background-color: var(--blanco);
+    margin-top: 30px;
 }
-
-/* Decoración lateral de flores (emojis grandes como background) */
-.cuenta-regresiva::before, .cuenta-regresiva::after {
-    content: "🌸";
-    position: absolute;
-    font-size: 5rem;
-    opacity: 0.15;
-    z-index: 1;
-}
-.cuenta-regresiva::before { top: 20px; left: 20px; transform: rotate(-15deg); }
-.cuenta-regresiva::after { bottom: 20px; right: 20px; transform: rotate(15deg); }
 
 .flores-decoracion {
     position: absolute;
-    left: 50%;
-    top: -25px;
-    transform: translateX(-50%);
+    left: 5%;
+    top: -30px;
+    width: 180px;
     z-index: 10;
-    font-size: 3rem; /* Usando emojis en lugar de img para asegurar carga */
+    opacity: 0.85;
 }
+.flores-decoracion img { width: 100%; }
 
 .reloj-container {
     background-color: var(--blanco);
     border-radius: 50%;
-    width: 340px;
-    height: 340px;
+    width: 320px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 5;
-    /* Efecto Glow rosado */
+    /* Estilo de doble borde elegante */
     box-shadow: 
-        0 0 0 10px var(--rosa-muy-claro),
-        0 0 20px 10px rgba(255, 92, 141, 0.3);
-    border: 2px solid var(--rosa-fuerte);
+        0 0 0 8px var(--blanco),
+        0 0 0 10px var(--rosa-medio),
+        0 10px 30px rgba(0,0,0,0.1);
 }
 
 .titulo-falta {
+    font-family: var(--fuente-elegante);
     color: var(--rosa-fuerte);
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 3rem;
+    margin-bottom: 5px;
 }
 
 .reloj {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.tiempo-box {
-    text-align: center;
+    gap: 8px;
+    color: var(--rosa-medio);
 }
 
 .tiempo-box span {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: var(--rosa-oscuro);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--rosa-fuerte);
     display: block;
-    line-height: 1;
 }
 
 .tiempo-box p {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: #999;
-    margin-top: 5px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #aaa;
+    margin-top: 2px;
 }
 
 .separador {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--rosa-pastel);
-    margin-bottom: 20px;
 }
 
-/* =========================================
-   10. FIESTA Y DETALLES
-   ========================================= */
+.corazon {
+    color: var(--rosa-fuerte);
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* --- FIESTA Y DETALLES --- */
 .detalles-fiesta {
     background-color: var(--blanco);
     padding-bottom: 70px;
@@ -448,31 +311,93 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
 
 .wave-top {
     color: var(--blanco);
-    margin-top: -2px;
-    background: transparent;
+    margin-top: -2px; /* Corrige pequeña línea blanca */
+}
+
+.icono-fiesta i {
+    font-size: 2.5rem;
+    color: var(--dorado);
+    margin: 20px 0;
 }
 
 .cinta-titulo {
-    background: linear-gradient(90deg, var(--rosa-medio), var(--rosa-fuerte));
+    background-color: #a8938a; /* Tono marrón topo elegante */
     color: white;
     display: inline-block;
-    padding: 12px 60px;
+    padding: 10px 50px;
     position: relative;
-    margin: 0 0 50px 0;
-    border-radius: 50px; /* Bordes redondos */
-    box-shadow: 0 5px 15px rgba(216, 27, 96, 0.3);
+    margin: 0 0 40px 0;
 }
 
 .cinta-titulo h3 {
-    font-size: 1.5rem;
+    font-family: var(--fuente-elegante);
+    font-size: 1.4rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: bold;
+    letter-spacing: 3px;
 }
 
-/* Tarjetas de Fiesta */
+.info-bloque { margin-bottom: 45px; }
+
+.info-bloque h4 {
+    font-family: var(--fuente-elegante);
+    color: #a8938a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.info-bloque p {
+    color: #777;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+/* --- BOTONES --- */
+.boton-rosa, .boton-mauve {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(212, 136, 149, 0.3);
+}
+
+.boton-rosa { background-color: var(--rosa-fuerte); }
+.boton-mauve { background-color: #c49ca4; }
+
+.boton-rosa:hover, .boton-mauve:hover {
+    background-color: var(--rosa-boton-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(212, 136, 149, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--fondo-body);
+    font-size: 0.9rem;
+    color: #999;
+    border-top: 1px solid var(--rosa-pastel);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .titulo-principal { font-size: 3.5rem; }
+    .titulo-dorado { font-size: 2.5rem; }
+    .reloj-container { width: 280px; height: 280px; }
+    .titulo-falta { font-size: 2.5rem; }
+    .tiempo-box span { font-size: 1.5rem; }
+    .slide { width: 250px; } /* Slides más pequeños en móvil */
+    .slider-track { width: calc(250px * 6); }
+}
+
 .etiqueta-fiesta-seccion {
-    padding: 20px 20px 80px;
+    padding: 60px 20px;
     background-color: var(--blanco);
     text-align: center;
 }
@@ -480,176 +405,98 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
 .tarjetas-fiesta-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
     margin-top: 40px;
 }
 
 .tarjeta-fiesta {
-    background: white;
-    border-radius: 25px;
-    padding: 40px 25px;
-    width: 320px;
-    border: 2px solid var(--rosa-pastel);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: all 0.4s ease;
+    background-color: #fcf4f5; /* Fondo rosado muy suave */
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    border: 1px solid #f0e6e8;
 }
 
-/* Efecto hover tarjeta */
 .tarjeta-fiesta:hover {
-    transform: translateY(-10px);
-    border-color: var(--rosa-fuerte);
-    box-shadow: 0 15px 40px rgba(255, 92, 141, 0.25);
-}
-
-/* Decoración superior tarjeta */
-.tarjeta-fiesta::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, var(--rosa-pastel), var(--rosa-fuerte));
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 136, 149, 0.2);
 }
 
 .titulo-tarjeta {
-    color: var(--rosa-oscuro);
-    font-weight: bold;
-    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #8a6c75; /* Tono marrón/rosa oscuro */
+    font-weight: 700;
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .icono-tarjeta {
-    font-size: 3.5rem;
-    background: -webkit-linear-gradient(45deg, var(--rosa-fuerte), var(--dorado));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 25px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    font-size: 3rem;
+    color: var(--rosa-fuerte);
+    margin-bottom: 20px;
+    opacity: 0.8;
 }
 
 .texto-tarjeta {
-    font-size: 1rem;
-    color: var(--texto-gris);
-    margin-bottom: 30px;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 25px;
+    line-height: 1.5;
     flex-grow: 1;
 }
 
-/* =========================================
-   11. BOTONES DE LUJO
-   ========================================= */
-.boton-fiesta, .boton-rosa, .boton-mauve {
-    background: linear-gradient(45deg, var(--rosa-fuerte), #e91e63);
+.boton-fiesta {
+    background-color: #c2185b; /* Rosa oscuro fuerte */
     color: white;
     border: none;
-    padding: 14px 40px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
-    position: relative;
-    overflow: hidden;
+    transition: background 0.3s;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Brillo al pasar el mouse por el botón */
-.boton-fiesta:hover, .boton-rosa:hover, .boton-mauve:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.5);
-    background: linear-gradient(45deg, #e91e63, var(--rosa-fuerte));
+.boton-fiesta:hover {
+    background-color: #ad1457;
 }
 
-.boton-mauve {
-    background: linear-gradient(45deg, #ad1457, #880e4f);
-    box-shadow: 0 5px 15px rgba(136, 14, 79, 0.3);
-}
-
-/* =========================================
-   12. GALERÍA EXTRA (4 FOTOS)
-   ========================================= */
-.galeria-extra-seccion {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: var(--rosa-muy-claro);
-}
-
-.grid-4-fotos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 1100px;
-    margin: 30px auto;
-}
-
-.foto-item {
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease;
-    border: 3px solid white;
-    position: relative;
-}
-
-.foto-item:hover {
-    transform: translateY(-5px) scale(1.02);
-    z-index: 2;
-    box-shadow: 0 15px 30px rgba(255, 92, 141, 0.3);
-}
-
-.foto-item img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    display: block;
-    transition: opacity 0.3s;
-}
-
-/* =========================================
-   13. VENTANAS MODALES
-   ========================================= */
+/* === VENTANAS MODALES (POP-UPS) === */
 .modal {
-    display: none;
+    display: none; /* Oculto por defecto */
     position: fixed;
     z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(60, 10, 30, 0.8); /* Fondo rosado oscuro translúcido */
+    background-color: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
 }
 
 .modal-contenido {
     background-color: white;
-    padding: 50px;
-    border-radius: 30px;
+    padding: 40px;
+    border-radius: 20px;
     width: 90%;
     max-width: 500px;
     text-align: center;
     position: relative;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    animation: aparecerModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 4px solid var(--rosa-pastel);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: aparecerModal 0.3s ease-out;
+    border: 3px solid var(--rosa-pastel);
 }
 
 @keyframes aparecerModal {
-    from { transform: scale(0.5); opacity: 0; }
+    from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
@@ -657,65 +504,201 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: bold;
-    color: var(--rosa-medio);
+    color: #aaa;
     cursor: pointer;
-    transition: color 0.3s;
 }
 
 .cerrar:hover { color: var(--rosa-fuerte); }
 
 .titulo-modal {
-    color: var(--rosa-fuerte);
-    font-size: 2rem;
+    font-family: var(--fuente-titulo);
+    color: var(--dorado);
+    font-size: 2.5rem;
     margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 .icono-modal {
-    font-size: 3.5rem;
-    color: var(--dorado);
-    margin: 20px 0;
-    text-shadow: 0 2px 10px rgba(230, 194, 0, 0.4);
+    font-size: 3rem;
+    color: var(--rosa-fuerte);
+    margin: 15px 0;
 }
 
-/* =========================================
-   14. FOOTER
-   ========================================= */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: white;
-    color: var(--rosa-oscuro);
-    border-top: 2px solid var(--rosa-pastel);
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* =========================================
-   15. RESPONSIVE DESIGN (MÓVIL)
-   ========================================= */
+/* Responsive para las tarjetas */
 @media (max-width: 768px) {
-    .titulo-principal { font-size: 2.8rem; letter-spacing: 2px; }
-    .titulo-dorado { font-size: 2rem; }
-    .reloj-container { width: 290px; height: 290px; }
-    .titulo-falta { font-size: 2rem; }
-    .tiempo-box span { font-size: 1.8rem; }
-    
-    .slide { width: 260px; }
-    .slider-track { width: calc(260px * 12); }
-    
+    .tarjetas-fiesta-container { flex-direction: column; align-items: center; }
+    .tarjeta-fiesta { width: 100%; max-width: 320px; }
+}
+/* Estilos para la sección de 4 fotos */
+.galeria-extra-seccion {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff; /* O el color de fondo que prefieras */
+}
+
+.grid-4-fotos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto (PC) */
+    gap: 15px; /* Espacio entre fotos */
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.foto-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.foto-item:hover {
+    transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+}
+
+.foto-item img {
+    width: 100%;
+    height: 250px; /* Altura fija para que todas se vean parejas */
+    object-fit: cover; /* Recorta la imagen para llenar el cuadro sin deformarla */
+    display: block;
+}
+
+/* --- RESPONSIVE (Para Celulares) --- */
+@media (max-width: 768px) {
     .grid-4-fotos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* En celular: 2 columnas */
         gap: 10px;
     }
-    .foto-item img { height: 180px; }
-    
-    .tarjetas-fiesta-container { flex-direction: column; align-items: center; }
-    .tarjeta-fiesta { width: 100%; max-width: 340px; }
-    
-    .mensaje-final { padding: 30px 15px; }
-    .tarjeta-mensaje { padding: 30px 20px; }
+
+    .foto-item img {
+        height: 180px; /* Un poco más pequeñas en celular */
+    }
+}
+* === ESTILOS DE LA SECCIÓN PRINCIPAL === */
+.mesa-regalos-section {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--fondo-rosado-suave);
+    /* Simulación de fondo de acuarela suave usando degradados radiales */
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 235, 238, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 240, 230, 0.8) 0%, transparent 40%);
+}
+
+.contenido-regalos {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté sobre el fondo */
+}
+
+/* === TIPOGRAFÍA === */
+.titulo-cursiva {
+    font-family: var(--fuente-titulo-cursiva);
+    color: var(--color-dorado-bronce);
+    font-size: 3.8rem; /* Tamaño grande para la cursiva */
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.texto-cuerpo {
+    font-family: var(--fuente-cuerpo-serif);
+    color: var(--color-texto-gris);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic; /* Cursiva itálica para la fuente serif */
+    margin-top: 40px;
+}
+
+/* === ESTILOS DE LOS ÍCONOS SVG === */
+/* Estilos generales para todos los SVG */
+.svg-icono {
+    fill: var(--color-dorado-bronce); /* Relleno para mariposas y corazones */
+    stroke: var(--color-dorado-bronce); /* Líneas para los sobres */
+}
+
+.sobres-linea {
+    fill: none; /* Los sobres son solo líneas, excepto los corazones dentro */
+}
+/* Los corazones dentro de los sobres sí llevan relleno */
+.sobres-linea path {
+     fill: var(--color-dorado-bronce);
+     stroke: none;
+}
+
+/* Contenedor flexible para centrar los íconos */
+.contenedor-iconos-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+/* === POSICIONAMIENTO DE MARIPOSAS === */
+.grupo-mariposas {
+    position: absolute;
+    /* Posicionamos el grupo a la izquierda del centro */
+    left: 50%;
+    transform: translateX(-180px); 
+    width: 100px;
+    height: 120px;
+}
+
+.mariposa {
+    position: absolute;
+    width: 35px;
+    height: auto;
+    stroke: none; /* Las mariposas son formas sólidas */
+    opacity: 0.9;
+}
+
+/* Posiciones individuales y rotaciones para que parezcan volar */
+.m1 { /* Arriba */
+    top: 0;
+    right: 10px;
+    transform: rotate(-25deg) scaleX(-1); /* scaleX(-1) voltea la imagen horizontalmente */
+}
+
+.m2 { /* Centro */
+    top: 45px;
+    left: 0;
+    transform: rotate(10deg) scaleX(-1);
+}
+
+.m3 { /* Abajo */
+    bottom: 5px;
+    right: 25px;
+    width: 30px; /* Un poco más pequeña */
+    transform: rotate(-15deg) scaleX(-1);
+}
+
+/* === ESTILO DEL ÍCONO DE SOBRES === */
+.icono-sobres svg {
+    width: 120px;
+    height: auto;
+    /* Filtro para darle un poco de sombra suave y que resalte */
+    filter: drop-shadow(2px 4px 4px rgba(168, 136, 96, 0.2));
+}
+
+/* === RESPONSIVE (Para celulares) === */
+@media (max-width: 600px) {
+    .titulo-cursiva {
+        font-size: 3rem;
+    }
+    .texto-cuerpo {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    /* En pantallas pequeñas, acercamos las mariposas a los sobres */
+    .grupo-mariposas {
+         transform: translateX(-140px);
+    }
+    .mariposa {
+        width: 28px;
+    }
 }
