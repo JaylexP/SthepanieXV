@@ -13,8 +13,8 @@
     --fuente-elegante: 'Didact Gothic', Didact Gothic;
    color-dorado-bronce: #A88860; /* El color exacto de los íconos y el título */
     --color-texto-gris: #4F4F4F;    /* Color gris oscuro para el texto del cuerpo */
-    --fuente-titulo-cursiva: 'Parisienne', cursive;
-    --fuente-cuerpo-serif: 'Playfair Display', serif;
+    --fuente-titulo-cursiva: ''Didact Gothic', cursive;
+    --fuente-cuerpo-serif: ''Didact Gothic', cursive;
     --fondo-rosado-suave: #fff9f9; /* Fondo base muy claro */
 }
 
