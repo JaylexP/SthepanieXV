@@ -8,14 +8,21 @@
     --texto-gris: #5a5a5a;
     --blanco: #ffffff;
     --fondo-body: #fffafb;
-    --fuente-titulo: 'Didact Gothic', cursive;
-    --fuente-cuerpo: 'Didact Gothic',Didact Gothic;
-    --fuente-elegante: 'Didact Gothic', Didact Gothic;
-   color-dorado-bronce: #A88860; /* El color exacto de los íconos y el título */
-    --color-texto-gris: #4F4F4F;    /* Color gris oscuro para el texto del cuerpo */
-    --fuente-titulo-cursiva: ''Didact Gothic', cursive;
-    --fuente-cuerpo-serif: ''Didact Gothic', cursive;
-    --fondo-rosado-suave: #fff9f9; /* Fondo base muy claro */
+
+    /* --- CONFIGURACIÓN DE TIPOGRAFÍA ACTUALIZADA --- */
+    /* Títulos estilo Cursiva Elegante (Pinyon Script) */
+    --fuente-titulo: 'Pinyon Script', cursive; 
+    
+    /* Cuerpo de texto limpio (Didact Gothic) */
+    --fuente-cuerpo: 'Didact Gothic', sans-serif;
+    
+    /* Fuente auxiliar elegante (usamos la misma del título para consistencia) */
+    --fuente-elegante: 'Pinyon Script', cursive;
+
+    /* Corrección de variables que tenían errores de sintaxis */
+    --color-dorado-bronce: #A88860; 
+    --color-texto-gris: #4F4F4F;   
+    --fondo-rosado-suave: #fff9f9; 
 }
 
 * {
@@ -35,17 +42,19 @@ body {
 .titulo-dorado {
     font-family: var(--fuente-titulo);
     color: var(--dorado);
-    font-size: 3rem;
+    font-size: 4rem; /* Aumentado porque Pinyon es fina */
     text-align: center;
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    line-height: 1.2;
 }
 
 .texto-centro {
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 25px;
     color: #777;
+    font-family: var(--fuente-cuerpo);
 }
 
 /* --- HERO SECTION --- */
@@ -54,19 +63,21 @@ body {
     text-align: center;
     padding-top: 60px;
     position: relative;
-    padding-bottom: 100px; /* Espacio para la onda */
+    padding-bottom: 100px; 
 }
 
 .titulo-principal {
     font-family: var(--fuente-titulo);
-    font-size: 4.5rem;
+    font-size: 5.5rem; /* Aumentado para mayor impacto en cursiva */
     color: var(--rosa-fuerte);
     margin-bottom: 10px;
+    line-height: 1.1;
 }
 
 .subtitulo {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 300;
+    font-family: var(--fuente-cuerpo);
 }
 
 .wave-container {
@@ -85,7 +96,7 @@ body {
     height: 120px;
 }
 
-/* --- SECCIÓN MENSAJE (Ahora es la segunda) --- */
+/* --- SECCIÓN MENSAJE --- */
 .mensaje-final {
     padding: 40px 20px 60px;
     background-color: var(--fondo-body);
@@ -103,7 +114,7 @@ body {
 }
 
 .instruccion-musica {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #888;
     margin-bottom: 5px;
 }
@@ -117,12 +128,12 @@ body {
 }
 
 .texto-emotivo {
-    font-family: var(--fuente-elegante);
+    font-family: var(--fuente-cuerpo); /* Cambiado a Didact para legibilidad */
     line-height: 1.9;
     color: #444;
     margin: 30px 0;
-    font-size: 1.05rem;
-    font-style: italic;
+    font-size: 1.1rem;
+    /* font-style: italic;  <- Opcional si quieres cursiva en el cuerpo */
 }
 
 .division-linea {
@@ -135,18 +146,19 @@ body {
 .titulo-padres {
     font-family: var(--fuente-titulo);
     color: var(--dorado);
-    font-size: 2.2rem;
+    font-size: 3rem; /* Pinyon Script adjustment */
     margin-bottom: 15px;
 }
 
 .nombres-padres p {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #333;
     margin: 8px 0;
+    font-family: var(--fuente-cuerpo);
 }
 
-/* --- NUEVA SECCIÓN FOTO DESTACADA --- */
+/* --- FOTO DESTACADA --- */
 .foto-destacada-seccion {
     padding: 40px 20px;
     text-align: center;
@@ -170,11 +182,11 @@ body {
     display: block;
 }
 
-/* --- GALERÍA DESLIZANTE (CARRUSEL INFINITO) --- */
+/* --- GALERÍA DESLIZANTE --- */
 .galeria-seccion {
-    padding: 50px 0; /* Quitamos padding lateral para que el slider ocupe todo */
+    padding: 50px 0;
     background-color: var(--fondo-body);
-    overflow: hidden; /* Esencial para ocultar lo que sale de la pantalla */
+    overflow: hidden; 
 }
 
 .slider-container {
@@ -183,22 +195,21 @@ body {
     padding: 20px 0;
 }
 
-/* La pista que se mueve */
 .slider-track {
     display: flex;
-    width: calc(300px * 6); /* Ancho aproximado: ancho de slide * número total de slides (originales + duplicados) */
-    animation: scroll 20s linear infinite; /* Ajusta '20s' para más rápido o más lento */
+    width: calc(300px * 6); 
+    animation: scroll 20s linear infinite; 
 }
 
 .slide {
-    width: 300px; /* Ancho fijo para cada imagen */
-    padding: 0 15px; /* Espacio entre imágenes */
+    width: 300px;
+    padding: 0 15px; 
     flex-shrink: 0;
 }
 
 .slide img {
     width: 100%;
-    height: 200px; /* Altura fija para uniformidad */
+    height: 200px; 
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -210,17 +221,9 @@ body {
     transform: scale(1.05);
 }
 
-/* Animación del desplazamiento */
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* Se mueve hacia la izquierda exactamente la mitad de su ancho total */
-        /* Si tienes 3 fotos originales de 300px + 30px margen, el total es aprox 990px. */
-        /* Ajusta este porcentaje si el salto no es suave. -50% funciona si duplicaste exactamente el contenido. */
-        transform: translateX(-50%); 
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* --- CUENTA REGRESIVA --- */
@@ -255,7 +258,6 @@ body {
     align-items: center;
     position: relative;
     z-index: 5;
-    /* Estilo de doble borde elegante */
     box-shadow: 
         0 0 0 8px var(--blanco),
         0 0 0 10px var(--rosa-medio),
@@ -263,9 +265,9 @@ body {
 }
 
 .titulo-falta {
-    font-family: var(--fuente-elegante);
+    font-family: var(--fuente-titulo); /* Pinyon Script */
     color: var(--rosa-fuerte);
-    font-size: 3rem;
+    font-size: 3.5rem; /* Ajustado */
     margin-bottom: 5px;
 }
 
@@ -277,17 +279,20 @@ body {
 }
 
 .tiempo-box span {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--rosa-fuerte);
     display: block;
+    font-family: var(--fuente-cuerpo);
 }
 
 .tiempo-box p {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 1px;
     color: #aaa;
     margin-top: 2px;
+    font-family: var(--fuente-cuerpo);
+    text-transform: uppercase;
 }
 
 .separador {
@@ -311,7 +316,7 @@ body {
 
 .wave-top {
     color: var(--blanco);
-    margin-top: -2px; /* Corrige pequeña línea blanca */
+    margin-top: -2px; 
 }
 
 .icono-fiesta i {
@@ -321,30 +326,32 @@ body {
 }
 
 .cinta-titulo {
-    background-color: #a8938a; /* Tono marrón topo elegante */
+    background-color: #a8938a; 
     color: white;
     display: inline-block;
     padding: 10px 50px;
     position: relative;
     margin: 0 0 40px 0;
+    border-radius: 4px;
 }
 
 .cinta-titulo h3 {
-    font-family: var(--fuente-elegante);
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    font-family: var(--fuente-titulo); /* Pinyon Script en cinta */
+    font-size: 2rem; /* Aumentado */
+    text-transform: none; /* Pinyon no se ve bien en todo mayúsculas */
+    letter-spacing: 1px;
 }
 
 .info-bloque { margin-bottom: 45px; }
 
 .info-bloque h4 {
-    font-family: var(--fuente-elegante);
+    font-family: var(--fuente-cuerpo);
     color: #a8938a;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.1rem;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .info-bloque p {
@@ -352,25 +359,30 @@ body {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 1.1rem;
+    font-family: var(--fuente-cuerpo);
 }
 
 /* --- BOTONES --- */
-.boton-rosa, .boton-mauve {
+.boton-rosa, .boton-mauve, .boton-fiesta {
     display: inline-block;
     text-decoration: none;
     padding: 12px 35px;
     border-radius: 30px;
     color: white;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(212, 136, 149, 0.3);
+    font-family: var(--fuente-cuerpo); /* Didact Gothic en botones */
+    border: none;
+    cursor: pointer;
 }
 
 .boton-rosa { background-color: var(--rosa-fuerte); }
 .boton-mauve { background-color: #c49ca4; }
+.boton-fiesta { background-color: #c2185b; }
 
-.boton-rosa:hover, .boton-mauve:hover {
+.boton-rosa:hover, .boton-mauve:hover, .boton-fiesta:hover {
     background-color: var(--rosa-boton-hover);
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(212, 136, 149, 0.4);
@@ -383,19 +395,10 @@ footer {
     font-size: 0.9rem;
     color: #999;
     border-top: 1px solid var(--rosa-pastel);
+    font-family: var(--fuente-cuerpo);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .titulo-principal { font-size: 3.5rem; }
-    .titulo-dorado { font-size: 2.5rem; }
-    .reloj-container { width: 280px; height: 280px; }
-    .titulo-falta { font-size: 2.5rem; }
-    .tiempo-box span { font-size: 1.5rem; }
-    .slide { width: 250px; } /* Slides más pequeños en móvil */
-    .slider-track { width: calc(250px * 6); }
-}
-
+/* --- ETIQUETA / TARJETAS FIESTA --- */
 .etiqueta-fiesta-seccion {
     padding: 60px 20px;
     background-color: var(--blanco);
@@ -411,7 +414,7 @@ footer {
 }
 
 .tarjeta-fiesta {
-    background-color: #fcf4f5; /* Fondo rosado muy suave */
+    background-color: #fcf4f5; 
     border-radius: 15px;
     padding: 30px 20px;
     width: 300px;
@@ -429,11 +432,12 @@ footer {
 }
 
 .titulo-tarjeta {
-    font-family: 'Montserrat', sans-serif;
-    color: #8a6c75; /* Tono marrón/rosa oscuro */
+    font-family: var(--fuente-cuerpo);
+    color: #8a6c75; 
     font-weight: 700;
     font-size: 1.3rem;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .icono-tarjeta {
@@ -444,32 +448,17 @@ footer {
 }
 
 .texto-tarjeta {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #777;
     margin-bottom: 25px;
     line-height: 1.5;
     flex-grow: 1;
+    font-family: var(--fuente-cuerpo);
 }
 
-.boton-fiesta {
-    background-color: #c2185b; /* Rosa oscuro fuerte */
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.boton-fiesta:hover {
-    background-color: #ad1457;
-}
-
-/* === VENTANAS MODALES (POP-UPS) === */
+/* === VENTANAS MODALES === */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -515,7 +504,7 @@ footer {
 .titulo-modal {
     font-family: var(--fuente-titulo);
     color: var(--dorado);
-    font-size: 2.5rem;
+    font-size: 3rem; /* Ajustado Pinyon */
     margin-bottom: 15px;
 }
 
@@ -525,22 +514,17 @@ footer {
     margin: 15px 0;
 }
 
-/* Responsive para las tarjetas */
-@media (max-width: 768px) {
-    .tarjetas-fiesta-container { flex-direction: column; align-items: center; }
-    .tarjeta-fiesta { width: 100%; max-width: 320px; }
-}
-/* Estilos para la sección de 4 fotos */
+/* --- GALERÍA 4 FOTOS --- */
 .galeria-extra-seccion {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff; /* O el color de fondo que prefieras */
+    background-color: #fff; 
 }
 
 .grid-4-fotos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto (PC) */
-    gap: 15px; /* Espacio entre fotos */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; 
     max-width: 1000px;
     margin: 30px auto;
 }
@@ -553,70 +537,45 @@ footer {
 }
 
 .foto-item:hover {
-    transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+    transform: scale(1.05); 
 }
 
 .foto-item img {
     width: 100%;
-    height: 250px; /* Altura fija para que todas se vean parejas */
-    object-fit: cover; /* Recorta la imagen para llenar el cuadro sin deformarla */
+    height: 250px; 
+    object-fit: cover; 
     display: block;
 }
 
-/* --- RESPONSIVE (Para Celulares) --- */
-@media (max-width: 768px) {
-    .grid-4-fotos {
-        grid-template-columns: repeat(2, 1fr); /* En celular: 2 columnas */
-        gap: 10px;
-    }
-
-    .foto-item img {
-        height: 180px; /* Un poco más pequeñas en celular */
-    }
-}
-
+/* --- MESA DE REGALOS (Tipografía mejorada Pinyon/Didact) --- */
 .mesa-regalos-elegante {
-    --color-dorado-antiguo: #8d6e63; /* Tono marrón/dorado de la imagen */
+    /* REDEFINICIÓN LOCAL PARA ASEGURAR CONSISTENCIA */
+    --fuente-titulo: 'Pinyon Script', cursive; 
+    --fuente-texto: 'Didact Gothic', sans-serif;
+    
+    --color-dorado-antiguo: #8d6e63;
     --color-texto-cita: #6d4c41;
     --fondo-crema: #fffdf9;
-    --fuente-titulo: 'Cinzel', serif; /* Fuente romana elegante */
-    --fuente-texto: 'Playfair Display', serif;
-    
+
     position: relative;
     padding: 100px 20px 80px;
     background-color: var(--fondo-crema);
     text-align: center;
-    overflow: hidden; /* Para recortar las flores si son muy grandes */
+    overflow: hidden; 
 }
 
-/* --- FLORES EN LAS ESQUINAS --- */
 .decoracion-floral {
     position: absolute;
     top: 0;
-    width: 250px; /* Ajusta el tamaño según tu imagen */
+    width: 250px; 
     max-width: 40%;
     z-index: 1;
     opacity: 0.9;
 }
+.flor-izq { left: -20px; top: -20px; }
+.flor-der { right: -20px; top: -20px; transform: scaleX(-1); }
+.decoracion-floral img { width: 100%; height: auto; display: block; }
 
-.flor-izq {
-    left: -20px;
-    top: -20px;
-}
-
-.flor-der {
-    right: -20px;
-    top: -20px;
-    transform: scaleX(-1); /* Voltea la imagen para hacer espejo si usas la misma */
-}
-
-.decoracion-floral img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* --- TÍTULO --- */
 .contenido-central {
     position: relative;
     z-index: 2;
@@ -625,24 +584,23 @@ footer {
 }
 
 .titulo-mesa {
-    font-family: var(--fuente-titulo);
+    font-family: var(--fuente-titulo); /* Pinyon Script */
     color: var(--color-dorado-antiguo);
-    font-size: 2.8rem;
-    line-height: 1.2;
-    font-weight: 400; /* Cinzel es naturalmente gruesa */
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 4.5rem; /* Tamaño grande para cursiva */
+    line-height: 1.1;
+    font-weight: 400; 
+    text-transform: none; /* Pinyon no debe ir en Mayúsculas forzadas */
     margin-bottom: 20px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
 }
 
 .separador-fino {
-    width: 100px;
+    width: 120px;
     height: 1px;
     background-color: var(--color-dorado-antiguo);
     margin: 0 auto 40px;
 }
 
-/* --- ECUACIÓN DE ÍCONOS --- */
 .ecuacion-regalos {
     display: flex;
     justify-content: center;
@@ -655,59 +613,74 @@ footer {
 .icono-dorado {
     width: 50px;
     height: 40px;
-    color: var(--color-dorado-antiguo); /* Esto controla el color del SVG */
+    color: var(--color-dorado-antiguo); 
     display: block;
 }
 
 .signo {
-    font-family: var(--fuente-titulo);
+    font-family: var(--fuente-texto); /* Didact Gothic */
     font-size: 2rem;
     color: var(--color-dorado-antiguo);
     margin: 0 5px;
 }
 
 .resultado {
-    font-family: var(--fuente-titulo);
+    font-family: var(--fuente-texto); /* Didact Gothic */
     font-size: 1.2rem;
     color: var(--color-dorado-antiguo);
     margin-left: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
-/* --- CAJA DE TEXTO/CITA --- */
 .caja-frase {
-    border: 1px solid var(--color-dorado-antiguo); /* Borde externo */
-    padding: 5px; /* Espacio para crear el efecto doble línea */
+    border: 1px solid var(--color-dorado-antiguo); 
+    padding: 5px; 
     margin-top: 20px;
 }
 
 .marco-interno {
-    border: 1px solid var(--color-dorado-antiguo); /* Borde interno */
+    border: 1px solid var(--color-dorado-antiguo); 
     padding: 25px 30px;
     background-color: transparent;
 }
 
 .caja-frase p {
-    font-family: var(--fuente-texto);
-    color: #4a3b36; /* Un gris café oscuro para lectura */
-    font-size: 1.1rem;
-    font-style: italic;
-    line-height: 1.6;
+    font-family: var(--fuente-texto); /* Didact Gothic */
+    color: #4a3b36; 
+    font-size: 1.15rem;
+    font-style: normal; /* Didact es sans-serif, se ve mejor normal */
+    line-height: 1.7;
     margin: 0;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 600px) {
-    .titulo-mesa { font-size: 2rem; }
+/* --- RESPONSIVE GENERAL --- */
+@media (max-width: 768px) {
+    .titulo-principal { font-size: 4rem; }
+    .titulo-dorado { font-size: 3rem; }
+    .reloj-container { width: 280px; height: 280px; }
+    .titulo-falta { font-size: 3rem; }
+    .tiempo-box span { font-size: 1.5rem; }
+    .slide { width: 250px; } 
+    .slider-track { width: calc(250px * 6); }
     
+    .grid-4-fotos {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+    .foto-item img { height: 180px; }
+
+    .tarjetas-fiesta-container { flex-direction: column; align-items: center; }
+    .tarjeta-fiesta { width: 100%; max-width: 320px; }
+
+    /* Mesa regalos responsive */
+    .titulo-mesa { font-size: 3.5rem; }
     .ecuacion-regalos { gap: 5px; }
     .icono-dorado { width: 35px; height: 30px; }
     .signo { font-size: 1.5rem; }
     .resultado { font-size: 1rem; width: 100%; margin-top: 10px; }
-    
     .decoracion-floral { width: 140px; }
-    
     .marco-interno { padding: 20px 15px; }
-    .caja-frase p { font-size: 0.95rem; }
+    .caja-frase p { font-size: 1rem; }
 }
