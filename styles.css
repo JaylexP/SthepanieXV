@@ -684,3 +684,97 @@ footer {
     .marco-interno { padding: 20px 15px; }
     .caja-frase p { font-size: 1rem; }
 }
+
+
+/* ---ESTILO UNCIOI --- */
+
+/* SECCIÓN ÚNICA PARA EVITAR MEZCLAS */
+#dedicatoria-xv {
+    font-family: 'Didact Gothic', sans-serif;
+    padding: 40px;
+    background-color: #f8f7f5;
+}
+
+/* Título principal */
+#dedicatoria-xv .titulo-unico {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 48px;
+    color: #C6A667; /* Dorado elegante */
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Tarjeta */
+#dedicatoria-xv .tarjeta-mensaje {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Texto instructivo */
+#dedicatoria-xv .instruccion-musica {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Iconos música */
+#dedicatoria-xv .iconos-musica {
+    text-align: center;
+    font-size: 28px;
+    color: #C6A667;
+    margin-bottom: 20px;
+}
+
+/* Texto del mensaje */
+#dedicatoria-xv .texto-emotivo {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #222;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+/* Línea divisoria */
+#dedicatoria-xv .division-linea {
+    width: 80%;
+    height: 2px;
+    background: #C6A667;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+/* Título padres */
+#dedicatoria-xv .titulo-padres-unico {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;
+    color: #C6A667;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Sección nombres */
+#dedicatoria-xv .nombres-padres-unico {
+    text-align: center;
+}
+
+#dedicatoria-xv .nombre-destacado {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+}
+
+#dedicatoria-xv .conector {
+    font-size: 24px;
+    color: #C6A667;
+    margin: 5px 0;
+}
+
+#dedicatoria-xv .texto-invitacion {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #444;
+}
